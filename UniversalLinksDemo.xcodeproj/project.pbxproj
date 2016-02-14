@@ -14,6 +14,12 @@
 		D42F4A191C6F08230029B3B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F4A171C6F08230029B3B2 /* LaunchScreen.storyboard */; };
 		D42F4A241C6F08230029B3B2 /* UniversalLinksDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A231C6F08230029B3B2 /* UniversalLinksDemoTests.swift */; };
 		D42F4A2F1C6F08230029B3B2 /* UniversalLinksDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A2E1C6F08230029B3B2 /* UniversalLinksDemoUITests.swift */; };
+		D42F4A3F1C706F870029B3B2 /* AuthorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A3E1C706F870029B3B2 /* AuthorsTableViewController.swift */; };
+		D42F4A411C706FB30029B3B2 /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A401C706FB30029B3B2 /* BooksTableViewController.swift */; };
+		D42F4A441C709D8D0029B3B2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A431C709D8D0029B3B2 /* Author.swift */; };
+		D42F4A461C709D990029B3B2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A451C709D990029B3B2 /* Book.swift */; };
+		D42F4A4B1C709E540029B3B2 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4A1C709E540029B3B2 /* Just.swift */; };
+		D42F4A4D1C70A5E20029B3B2 /* AuthorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,13 @@
 		D42F4A2A1C6F08230029B3B2 /* UniversalLinksDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalLinksDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42F4A2E1C6F08230029B3B2 /* UniversalLinksDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinksDemoUITests.swift; sourceTree = "<group>"; };
 		D42F4A301C6F08230029B3B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D42F4A3C1C706F2F0029B3B2 /* UniversalLinksDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UniversalLinksDemo.entitlements; sourceTree = "<group>"; };
+		D42F4A3E1C706F870029B3B2 /* AuthorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsTableViewController.swift; sourceTree = "<group>"; };
+		D42F4A401C706FB30029B3B2 /* BooksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
+		D42F4A431C709D8D0029B3B2 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		D42F4A451C709D990029B3B2 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D42F4A4A1C709E540029B3B2 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
+		D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +110,10 @@
 		D42F4A0D1C6F08230029B3B2 /* UniversalLinksDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D42F4A471C709E080029B3B2 /* Network */,
+				D42F4A3C1C706F2F0029B3B2 /* UniversalLinksDemo.entitlements */,
+				D42F4A421C709D740029B3B2 /* Models */,
+				D42F4A3D1C706F570029B3B2 /* View Controllers */,
 				D42F4A0E1C6F08230029B3B2 /* AppDelegate.swift */,
 				D42F4A101C6F08230029B3B2 /* ViewController.swift */,
 				D42F4A121C6F08230029B3B2 /* Main.storyboard */,
@@ -123,6 +140,33 @@
 				D42F4A301C6F08230029B3B2 /* Info.plist */,
 			);
 			path = UniversalLinksDemoUITests;
+			sourceTree = "<group>";
+		};
+		D42F4A3D1C706F570029B3B2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D42F4A3E1C706F870029B3B2 /* AuthorsTableViewController.swift */,
+				D42F4A401C706FB30029B3B2 /* BooksTableViewController.swift */,
+				D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D42F4A421C709D740029B3B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D42F4A431C709D8D0029B3B2 /* Author.swift */,
+				D42F4A451C709D990029B3B2 /* Book.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D42F4A471C709E080029B3B2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D42F4A4A1C709E540029B3B2 /* Just.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +237,12 @@
 				TargetAttributes = {
 					D42F4A0A1C6F08230029B3B2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 72H8ZPD4X8;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					D42F4A1E1C6F08230029B3B2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -256,8 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42F4A4B1C709E540029B3B2 /* Just.swift in Sources */,
 				D42F4A111C6F08230029B3B2 /* ViewController.swift in Sources */,
+				D42F4A3F1C706F870029B3B2 /* AuthorsTableViewController.swift in Sources */,
+				D42F4A461C709D990029B3B2 /* Book.swift in Sources */,
+				D42F4A411C706FB30029B3B2 /* BooksTableViewController.swift in Sources */,
+				D42F4A4D1C70A5E20029B3B2 /* AuthorProfileViewController.swift in Sources */,
 				D42F4A0F1C6F08230029B3B2 /* AppDelegate.swift in Sources */,
+				D42F4A441C709D8D0029B3B2 /* Author.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +453,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemo/UniversalLinksDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UniversalLinksDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.behindtechlines.UniversalLinksDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +469,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UniversalLinksDemo/UniversalLinksDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UniversalLinksDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.behindtechlines.UniversalLinksDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
