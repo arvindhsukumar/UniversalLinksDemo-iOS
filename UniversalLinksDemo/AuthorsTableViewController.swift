@@ -14,7 +14,8 @@ class AuthorsTableViewController: UITableViewController {
 
     var authors: [Author] = []
     var selectedAuthor: Author?
-    
+    var activityIndicator: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +26,12 @@ class AuthorsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: kAuthorCellIdentifier)
         
+        self.activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,30,30))
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        activityIndicator.hidesWhenStopped = true
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
+
         loadAuthors()
     }
 
@@ -33,14 +40,23 @@ class AuthorsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func refreshData(){
+        loadAuthors()
+    }
+    
     private func loadAuthors(){
+        self.activityIndicator.startAnimating()
+        
         Just.get("\(kBaseURL)/authors.json",asyncCompletionHandler: {
             result in
+            
+            
             
             guard let authorsArray = result.json as? [NSDictionary] else {
                 return
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.activityIndicator.stopAnimating()
                 var authors:[Author] = []
                 for authorInfo in authorsArray {
                     let name = authorInfo.valueForKey("name") as? String

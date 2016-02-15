@@ -20,6 +20,7 @@
 		D42F4A461C709D990029B3B2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A451C709D990029B3B2 /* Book.swift */; };
 		D42F4A4B1C709E540029B3B2 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4A1C709E540029B3B2 /* Just.swift */; };
 		D42F4A4D1C70A5E20029B3B2 /* AuthorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */; };
+		D42F4A4E1C71E8580029B3B2 /* UniversalLinksDemo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D42F4A3C1C706F2F0029B3B2 /* UniversalLinksDemo.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42F4A4E1C71E8580029B3B2 /* UniversalLinksDemo.entitlements in Resources */,
 				D42F4A191C6F08230029B3B2 /* LaunchScreen.storyboard in Resources */,
 				D42F4A161C6F08230029B3B2 /* Assets.xcassets in Resources */,
 				D42F4A141C6F08230029B3B2 /* Main.storyboard in Resources */,
@@ -548,6 +550,7 @@
 				D42F4A351C6F08230029B3B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D42F4A361C6F08230029B3B2 /* Build configuration list for PBXNativeTarget "UniversalLinksDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +559,7 @@
 				D42F4A381C6F08230029B3B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D42F4A391C6F08230029B3B2 /* Build configuration list for PBXNativeTarget "UniversalLinksDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +568,7 @@
 				D42F4A3B1C6F08230029B3B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,6 +14,7 @@ class BooksTableViewController: UITableViewController {
 
     var authorID: Int!
     var books: [Book] = []
+    var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,24 +27,36 @@ class BooksTableViewController: UITableViewController {
        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: kBookCellIdentifier)
         
+        self.activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,30,30))
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        activityIndicator.hidesWhenStopped = true
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
+        
         loadBooksForAuthor(authorID)
 
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func refreshData(){
+        loadBooksForAuthor(authorID)
+    }
 
     private func loadBooksForAuthor(authorID:Int){
+        
+        self.activityIndicator?.startAnimating()
+        
         Just.get("\(kBaseURL)/authors/\(authorID)/books.json",asyncCompletionHandler: {
             result in
-            
             guard let booksArray = result.json as? [NSDictionary] else {
                 return
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.activityIndicator?.stopAnimating()
                 var books:[Book] = []
                 for bookInfo in booksArray {
                     let name = bookInfo.valueForKey("name") as? String
