@@ -52,11 +52,15 @@ class BooksTableViewController: UITableViewController {
         
         Just.get("\(kBaseURL)/authors/\(authorID)/books.json",asyncCompletionHandler: {
             result in
+            
             guard let booksArray = result.json as? [NSDictionary] else {
                 return
             }
+            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+               
                 self.activityIndicator?.stopAnimating()
+                
                 var books:[Book] = []
                 for bookInfo in booksArray {
                     let name = bookInfo.valueForKey("name") as? String

@@ -7,7 +7,7 @@
         <!--Authors-->
         <scene sceneID="Wbz-Mm-0hs">
             <objects>
-                <tableViewController id="eeJ-94-Bmy" customClass="AuthorsTableViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AuthorsTableViewController" id="eeJ-94-Bmy" customClass="AuthorsTableViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tIW-RS-QPJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
         <!--Profile-->
         <scene sceneID="vlv-Ih-ojq">
             <objects>
-                <viewController title="Profile" id="sA4-t0-8ae" customClass="AuthorProfileViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorProfileViewController" title="Profile" id="sA4-t0-8ae" customClass="AuthorProfileViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sP4-MF-T9h"/>
                         <viewControllerLayoutGuide type="bottom" id="ThJ-yi-aAP"/>
@@ -113,7 +113,7 @@
         <!--Books-->
         <scene sceneID="QTF-qa-6dJ">
             <objects>
-                <tableViewController id="XgT-P0-kLx" customClass="BooksTableViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BooksTableViewController" id="XgT-P0-kLx" customClass="BooksTableViewController" customModule="UniversalLinksDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uh4-o6-W5w">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

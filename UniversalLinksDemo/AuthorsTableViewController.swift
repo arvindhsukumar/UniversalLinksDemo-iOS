@@ -50,13 +50,14 @@ class AuthorsTableViewController: UITableViewController {
         Just.get("\(kBaseURL)/authors.json",asyncCompletionHandler: {
             result in
             
-            
-            
             guard let authorsArray = result.json as? [NSDictionary] else {
                 return
             }
+            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
                 self.activityIndicator.stopAnimating()
+                
                 var authors:[Author] = []
                 for authorInfo in authorsArray {
                     let name = authorInfo.valueForKey("name") as? String

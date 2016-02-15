@@ -21,6 +21,9 @@
 		D42F4A4B1C709E540029B3B2 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4A1C709E540029B3B2 /* Just.swift */; };
 		D42F4A4D1C70A5E20029B3B2 /* AuthorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */; };
 		D42F4A4E1C71E8580029B3B2 /* UniversalLinksDemo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D42F4A3C1C706F2F0029B3B2 /* UniversalLinksDemo.entitlements */; };
+		D42F4A5A1C7212410029B3B2 /* SHNUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A571C7212410029B3B2 /* SHNUrlRoute.swift */; };
+		D42F4A5B1C7212410029B3B2 /* SHNUrlRouted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A581C7212410029B3B2 /* SHNUrlRouted.swift */; };
+		D42F4A5C1C7212410029B3B2 /* SHNUrlRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F4A591C7212410029B3B2 /* SHNUrlRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		D42F4A451C709D990029B3B2 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D42F4A4A1C709E540029B3B2 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		D42F4A4C1C70A5E20029B3B2 /* AuthorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorProfileViewController.swift; sourceTree = "<group>"; };
+		D42F4A571C7212410029B3B2 /* SHNUrlRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNUrlRoute.swift; sourceTree = "<group>"; };
+		D42F4A581C7212410029B3B2 /* SHNUrlRouted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNUrlRouted.swift; sourceTree = "<group>"; };
+		D42F4A591C7212410029B3B2 /* SHNUrlRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNUrlRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +117,9 @@
 		D42F4A0D1C6F08230029B3B2 /* UniversalLinksDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D42F4A471C709E080029B3B2 /* Network */,
+				D42F4A501C720C730029B3B2 /* Router */,
 				D42F4A3C1C706F2F0029B3B2 /* UniversalLinksDemo.entitlements */,
+				D42F4A471C709E080029B3B2 /* Network */,
 				D42F4A421C709D740029B3B2 /* Models */,
 				D42F4A3D1C706F570029B3B2 /* View Controllers */,
 				D42F4A0E1C6F08230029B3B2 /* AppDelegate.swift */,
@@ -168,6 +175,16 @@
 				D42F4A4A1C709E540029B3B2 /* Just.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		D42F4A501C720C730029B3B2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D42F4A571C7212410029B3B2 /* SHNUrlRoute.swift */,
+				D42F4A581C7212410029B3B2 /* SHNUrlRouted.swift */,
+				D42F4A591C7212410029B3B2 /* SHNUrlRouter.swift */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,12 +327,15 @@
 			files = (
 				D42F4A4B1C709E540029B3B2 /* Just.swift in Sources */,
 				D42F4A111C6F08230029B3B2 /* ViewController.swift in Sources */,
+				D42F4A5B1C7212410029B3B2 /* SHNUrlRouted.swift in Sources */,
+				D42F4A5A1C7212410029B3B2 /* SHNUrlRoute.swift in Sources */,
 				D42F4A3F1C706F870029B3B2 /* AuthorsTableViewController.swift in Sources */,
 				D42F4A461C709D990029B3B2 /* Book.swift in Sources */,
 				D42F4A411C706FB30029B3B2 /* BooksTableViewController.swift in Sources */,
 				D42F4A4D1C70A5E20029B3B2 /* AuthorProfileViewController.swift in Sources */,
 				D42F4A0F1C6F08230029B3B2 /* AppDelegate.swift in Sources */,
 				D42F4A441C709D8D0029B3B2 /* Author.swift in Sources */,
+				D42F4A5C1C7212410029B3B2 /* SHNUrlRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
