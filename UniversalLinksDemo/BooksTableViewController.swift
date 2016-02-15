@@ -13,6 +13,7 @@ let kBookCellIdentifier = "BookCell"
 class BooksTableViewController: UITableViewController {
 
     var authorID: Int!
+    var authorName: String!
     var books: [Book] = []
     var activityIndicator: UIActivityIndicatorView!
     
@@ -45,6 +46,22 @@ class BooksTableViewController: UITableViewController {
     func refreshData(){
         loadBooksForAuthor(authorID)
     }
+    
+    private func setupHeader(){
+        let headerView = UIView(frame: CGRectMake(0,0,self.tableView.frame.size.width,70))
+        headerView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth]
+        headerView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+        
+        let label = UILabel(frame: headerView.bounds)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Viewing books by: \(authorName)"
+        label.backgroundColor = headerView.backgroundColor
+        label.textColor = UIColor.whiteColor()
+        
+        headerView.addSubview(label)
+        
+        tableView.tableHeaderView = headerView
+    }
 
     private func loadBooksForAuthor(authorID:Int){
         
@@ -53,7 +70,7 @@ class BooksTableViewController: UITableViewController {
         Just.get("\(kBaseURL)/authors/\(authorID)/books.json",asyncCompletionHandler: {
             result in
             
-            guard let booksArray = result.json as? [NSDictionary] else {
+            guard let info = result.json as? NSDictionary else {
                 return
             }
             
@@ -62,6 +79,8 @@ class BooksTableViewController: UITableViewController {
                 self.activityIndicator?.stopAnimating()
                 
                 var books:[Book] = []
+                let booksArray = info["books"] as! [NSDictionary]
+                
                 for bookInfo in booksArray {
                     let name = bookInfo.valueForKey("name") as? String
                     let id = bookInfo.valueForKey("id") as? Int
@@ -71,6 +90,11 @@ class BooksTableViewController: UITableViewController {
                 }
                 
                 self.books = books
+                
+                let authorInfo = info["author"] as! NSDictionary
+                self.authorName = authorInfo.valueForKey("name") as? String ?? ""
+                
+                self.setupHeader()
                 self.tableView.reloadData()
                 
             })
